@@ -1,6 +1,6 @@
 # Progress
 ## Benchmark
-I went to a talk by Ani Kembhavi, some parts of his work using LLM to generate assets were interesting. And they could provide large amounts of generated data for robotics training, such as generated indoor environments and objects.
+I went to a talk by [Ani Kembhavi](https://anikem.github.io/), some parts of his work using LLM to generate assets were interesting. And they could provide large amounts of generated data for robotics training, such as generated indoor environments and objects.
 
 After the talk, we clarified the benchmark we are implementing with Maya. We we gonna do is to evaluate some simple tasks in Habitat and know more about Habitat’s API. We don’t need to care about FSM so far, try to make Habitat up and running.
 
