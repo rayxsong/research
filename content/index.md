@@ -1,11 +1,7 @@
 ---
-title: Automatic Finite-State Machine Generation for Robotic Tasks from Natural Language Specifications
+title: Research Documentation
 draft: false
 tags:
 ---
  
-Guided by Maya Cakmak
-
-- [[Week 6]]
-- [[Week 5]]
-- [[Week 4]]
+- [[fsm_index]] Guided by Maya Cakmak
