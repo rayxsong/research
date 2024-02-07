@@ -25,5 +25,5 @@ Another thing is try to set Habitat on Colab although it is not officially suppo
 - https://eureka-research.github.io/
 
 ## Documentation
-To improve code readability, transfer all documentations from Google Doc to Obsidian, and hosting with [Quartz](https://quartz.jzhao.xyz/) online.
+To improve code readability, transfer all documentations from Google Doc to Obsidian, and hosting with [Quartz](https://quartz.jzhao.xyz/) online. Simple and good. Love it.
 
