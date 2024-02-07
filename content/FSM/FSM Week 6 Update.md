@@ -18,10 +18,11 @@ Another thing is try to set Habitat on Colab although it is not officially suppo
 - Setup Habitat on Colab
 - Exploring Habitat
 - Figuring out more benchmark
+
 #### Related Links
-- https://robotics-transformer2.github.io/
+- RT-2 by Google: https://robotics-transformer2.github.io/, Transfer Web Knowledge to Robotic Control
 - Stretch Model: https://github.com/hello-robot/stretch_ros/tree/noetic/stretch_description
-- https://neptune.ai/blog/best-benchmarks-for-reinforcement-learning 
-- https://eureka-research.github.io/
+- Current Benchmarks for RL: https://neptune.ai/blog/best-benchmarks-for-reinforcement-learning 
+- Eureka by Nvidia: https://eureka-research.github.io/, Eureka is an algorithm leveraging Large Language Models (LLMs), such as GPT-4, to autonomously design reward functions for reinforcement learning, surpassing human-engineered rewards and enabling complex low-level manipulation tasks like dexterous pen spinning without task-specific prompting.
 
 

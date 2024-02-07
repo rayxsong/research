@@ -43,6 +43,6 @@ export KMP_DUPLICATE_LIB_OK=True
 ```
 
 #### Related Links
-- https://zhuanlan.zhihu.com/p/672898454 , very useful installation work through, in Chinese
-- https://github.com/facebookresearch/habitat-sim, Habitat Sim
-- https://github.com/facebookresearch/habitat-lab, Habitat Lab
+- Useful installation walkthrough: https://zhuanlan.zhihu.com/p/672898454 , in Chinese
+- Habitat Sim repo: https://github.com/facebookresearch/habitat-sim
+- Habitat Lab repo: https://github.com/facebookresearch/habitat-lab
