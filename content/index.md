@@ -1,10 +1,10 @@
 ---
-title: Automatic Finite-State Machine Generation for Robotic Tasks
+title: Automatic Finite-State Machine Generation for Robotic Tasks from Natural Language Specifications
 draft: false
 tags:
 ---
  
-from Natural Language Specifications.
+Guided by Maya Cakmak
 
 - [[Week 6]]
 - [[Week 5]]
