@@ -1,0 +1,1 @@
+- 02-06-2024: To improve code readability, transfer all documentations from Google Doc to Obsidian, and hosting with [Quartz](https://quartz.jzhao.xyz/) online. Simple and good. Love it.
