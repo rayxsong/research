@@ -5,3 +5,5 @@ tags:
 ---
  
 - [[Finite-State Machine]] 
+- [[Vera Extension]]
+- [[Diffsinger Extension]]
