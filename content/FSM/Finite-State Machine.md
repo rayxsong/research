@@ -2,6 +2,8 @@
 title: Finite-State Machine
 draft: false
 tags:
+  - Robotics
+  - NLP
 ---
 # Automatic Finite-State Machine Generation for Robotic Tasks from Natural Language Specifications
 Guided by Maya Cakmak

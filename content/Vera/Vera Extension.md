@@ -2,6 +2,7 @@
 title: Vera Extension
 draft: false
 tags:
+  - NLP
 ---
 # Vera: A General-Purpose Plausibility Estimation Model for Commonsense Statements
 447 Final Project
