@@ -16,7 +16,8 @@ Habitat Version: 3.0, Habitat Sim, Habitat Lab
 
 ```shell
 # Install Conda, not miniconda
-CONDA_SUBDIR=osx-64 conda create -n habitat python=3.9 cmake=3.14.0 (use higher cmake version if possible)
+CONDA_SUBDIR=osx-64 conda create -n habitat python=3.9 cmake=3.14.0 
+# use higher cmake version if possible
 conda activate habitat
 
 conda install habitat-sim withbullet -c conda-forge -c aihabitat
@@ -27,16 +28,18 @@ pip install -e habitat-lab
 pip install -e habitat-baselines
 conda update --all
 
-#git lfs install(if you don’t have it)
+git lfs install
+# if you don’t have lfs
 python -m habitat_sim.utils.datasets_download --uids habitat_test_scenes --data-path data/
 python -m habitat_sim.utils.datasets_download --uids habitat_test_pointnav_dataset --data-path data/
-#(Optional) if you see some packages missing try conda uninstall that package, then use conda install again
+#if you see some packages missing try conda uninstall that package, then use conda install again
 ```
 
 Errors Handling:
 MP: Error #15: Initializing libiomp5.dylib, but found libomp.dylib already initialized.
 ```shell
-export KMP_DUPLICATE_LIB_OK=True(run this before your first Habitat running)
+# run this before your first Habitat running
+export KMP_DUPLICATE_LIB_OK=True
 ```
 
 #### Related Links
