@@ -20,8 +20,8 @@ wget http://fishros.com/install -O fishros && . fishros
 
 #### Related Links
 
-- [https://mac.getutm.app/](https://mac.getutm.app/)
-- [https://wiki.ros.org/noetic/Installation/Ubuntu](https://wiki.ros.org/noetic/Installation/Ubuntu)
-- [https://zhuanlan.zhihu.com/p/515361781](https://zhuanlan.zhihu.com/p/515361781) (Install ROS Noetic on Ubuntu 20.04, Chinese tutorial)
+- UTM, Virtual Machine on MacOS [https://mac.getutm.app/](https://mac.getutm.app/)
+- Official Install ROS Noetic [https://wiki.ros.org/noetic/Installation/Ubuntu](https://wiki.ros.org/noetic/Installation/Ubuntu)
+- Install ROS Noetic on Ubuntu 20.04 in Chinese [https://zhuanlan.zhihu.com/p/515361781](https://zhuanlan.zhihu.com/p/515361781) 
 
 Trying to install AI habitat locally.
