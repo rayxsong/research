@@ -26,7 +26,7 @@ export default ((opts?: Options) => {
           ))}
         </ul> */}
         <p>
-          Documented by Ray Song
+          Documented by Ray Song © {year}
         </p>
       </footer>
     )
