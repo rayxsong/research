@@ -114,20 +114,22 @@ When I did research, "localization" is a word that used a lot, but I don't think
 
 Basically, it provides location information of the robot. This information is usually gathered by sensors that monitor robots' motions.  And the knowledge of reliability of the location estimate is crucial as there could be lots of noises in the environment, and it impacts the decisions the robots make.
 
-## Virtual Machine
-I gained lots of experience setting up the environment so far, and Arm64 is not compatible(Pytorch3D, ROS, etc.) in the most of time which is disappointing. 
+In Habitat API, it provides a shortest path finder, this could a point navigation benchmark if we implement our pathfinding algorithm in the future.
 
-I have tried 4 different virtual machine softwares: UTM, VMWare Fusion, Virtual Box, Parallel Desktop. I like UTM, the interface is simple, and you can emulate x86 system. However, the emulation is extremely slow, I tried to install Ubuntu 20.04 desktop x86_64 using UTM, and the installation process took about 1 hour, so I don't encourage you to use it.
+## Virtual Machine
+I gained lots of experience setting up the environment so far, and my MacBook Pro with Arm64 is not compatible(Pytorch3D, ROS, etc.) in the most of time which is disappointing. 
+
+I have tried 4 different virtual machine softwares: 
+- UTM
+- VMWare Fusion
+- Virtual Box
+- Parallel Desktop
+I like UTM, the interface is simple, and you can emulate x86 system. However, the emulation is extremely slow, I tried to install Ubuntu 20.04 desktop x86_64 using UTM, and the installation process took about 1 hour, so I don't encourage you to use it.
 # Plan
 
 Besides navigation, we may need to think about benchmarks in other tasks, such as picking, task time, etc.
 
 Another thing is try to set Habitat on Colab although it is not officially supported. Installation script was removed on official Github repo, but here is a [previous version](https://drive.google.com/file/d/1TtrDDLWs786yp7h8vIB9jiFi0N96tVg8/view) I found.
-
-- [ ] Exploring Habitat
-- [ ] Finding alternative libraries writing FSM
-- [ ] Try to write simple FSM and make it work in Habitat in realtime
-- [ ] Try to implement a FSM visualization, something like SMACH viewer
 
 #### Related Links
 - RT-2 by Google: https://robotics-transformer2.github.io/, Transfer Web Knowledge to Robotic Control
