@@ -124,7 +124,10 @@ I have tried 4 different virtual machine softwares:
 - VMWare Fusion
 - Virtual Box
 - Parallel Desktop
+
 I like UTM, the interface is simple, and you can emulate x86 system. However, the emulation is extremely slow, I tried to install Ubuntu 20.04 desktop x86_64 using UTM, and the installation process took about 1 hour, so I don't encourage you to use it.
+
+- Archive of all versions of Anaconda: https://repo.anaconda.com/archive/
 # Plan
 
 Besides navigation, we may need to think about benchmarks in other tasks, such as picking, task time, etc.
