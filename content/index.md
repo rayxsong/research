@@ -4,7 +4,7 @@ draft: false
 tags:
 ---
  This is my research process documentation.
-- [[Finite-State Machine]] 
-- [[Vera Extension]]
-- [[Diffsinger Extension]]
-- [[FIDELIS]]
+- 🤖 [[Finite-State Machine]] 
+- ✅ [[Vera Extension]]
+- 🎤 [[Diffsinger Extension]]
+- 🧊 [[FIDELIS]]
