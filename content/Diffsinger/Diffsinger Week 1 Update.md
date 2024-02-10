@@ -23,6 +23,7 @@ The shortest answer is that it’s a way to digitize your voice, using a carrier
 
 I will stop the search on Vocoder here, and I would like to know more about in the future.
 ## Diffusion
+#Diffusion #model
 Diffusion Models are successfully in text to image generation in recently years, such as Stable Diffusion and DALLE.
 Downside: sampling speed is slow.
 
@@ -39,6 +40,7 @@ Three components:
 The shallow diffusion mechanism in DiffSinger is an approach that applies the diffusion probabilistic model concept, traditionally used in image generation, to singing voice synthesis. This mechanism works by gradually denoising a signal over a relatively small number of steps, improving the quality and naturalness of the synthesized singing voice. Unlike deeper diffusion models that require many steps and thus increase computational load and inference time, the shallow diffusion strategy aims to balance efficiency and performance, offering a practical solution for generating high-quality singing voices with less computational resource.
 
 ## GAN
+#GAN #model
 Unsupervised, but supervised by itself.
 
 Two parts, both implemented using CNNs:
@@ -46,3 +48,8 @@ Two parts, both implemented using CNNs:
 2. Discriminator: it figures out if the given sample is a real sample in the domain set or a fake sample by generator
 
 First, we need to feed discriminator lots of real data to train it until it can find if the input image is not real. Then, generator starts to generate fake images, and send it to discriminator. If discriminator finds it is fake(there is no intermediary, only two decisions: fake or real), generator changes its behaviors, if discriminator finds it is real, generator remains the same behaviors, discriminator needs to change its behaviors.
+
+Limitations:
+- Mode collapse: similar outputs
+- Generating OOD: hard to find new patterns
+- Hard to train
