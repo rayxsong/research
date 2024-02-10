@@ -17,6 +17,7 @@ TODO:
 - [ ] Deploy locally  
 - [x] Know more about standard Diffusion model
 
+#### Related Links:
 - Repository: https://github.com/MoonInTheRiver/DiffSinger
 - Paper:  https://arxiv.org/abs/2105.02446
 - Demo: https://aistudio.baidu.com/projectdetail/4596296

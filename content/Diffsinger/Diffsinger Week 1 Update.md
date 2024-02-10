@@ -24,6 +24,7 @@ The shortest answer is that it’s a way to digitize your voice, using a carrier
 I will stop the search on Vocoder here, and I would like to know more about in the future.
 ## Diffusion
 #Diffusion #model
+
 Diffusion Models are successfully in text to image generation in recently years, such as Stable Diffusion and DALLE.
 Downside: sampling speed is slow.
 
@@ -44,6 +45,7 @@ The shallow diffusion mechanism in DiffSinger is an approach that applies the di
 
 ## GAN
 #GAN #model
+
 Unsupervised, but supervised by itself.
 
 Two parts, both implemented using CNNs:
