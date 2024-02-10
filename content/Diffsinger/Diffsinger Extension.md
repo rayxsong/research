@@ -3,7 +3,7 @@ title: Diffsinger Extension
 draft: false
 tags:
   - Deep-Learning
-  - "#Audio"
+  - Audio
 ---
 # DiffSinger: Singing Voice Synthesis via Shallow Diffusion Mechanism
 493G Final Project
