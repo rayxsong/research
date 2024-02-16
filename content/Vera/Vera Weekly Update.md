@@ -15,7 +15,7 @@ I spent some time figuring it out, hope it is useful somehow.
 # Using gcloud CLI
 1. Download and install gcloud CLI [here](https://cloud.google.com/sdk/docs/install).
 2. Use `gcloud init` to initialize, and set up passkeys etc.
-3. Then use the information you noted in Google Cloud setup to access your VM:
+3. Then use the information you noted in Google Cloud setup to access your VM, replace with your project ID in step 1, and project zone, VM name in step 3:
 	```
 	gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
 	```
