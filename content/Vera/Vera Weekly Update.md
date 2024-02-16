@@ -24,7 +24,9 @@
 1. It is a empty VM, we need to install all needed packages, such as `conda`, `git` etc.
 2. Sometimes using `gdown` to download files has permission problems, current solution is got the root folder, the use `gdown`
 3. Prepare the W&B API key if your code are using `wandb` to monitor training.
+4. `source ~/.bashrc` is a good friend when set up some environments.
 
 # Related Links
 - [Accelerate Library](https://huggingface.co/docs/accelerate/en/index), nables the same PyTorch code to be run across any distributed configuration.
-- [W&B](nables the same PyTorch code to be run across any distributed configuration), AI developer platform, with tools for training models, fine-tuning models, and leveraging foundation models.
+- [W&B](https://wandb.ai/site), AI developer platform, with tools for training models, fine-tuning models, and leveraging foundation models.
+- 
