@@ -3,7 +3,7 @@
 # Google Cloud Setup
 1. Go to upper-left select organization `cs.washington.edu`, then select `My First Project`, remember the project ID.
 2. Go to top search bar, search `COMPUTE ENGINE`.
-3. Click `CREATE INSTANCE`, create name, region, zone for you VM, and take notes for these information now if you don't want to waste time finding them later.
+3. Click `CREATE INSTANCE`, create name, region, zone for you VM, and take notes for these information now if you don't want to waste time finding them later. We used `us-west` since it shows low CO2.
 4. In `Machine configuration`, select `GPUs`, we used `NVIDIA T4`, select what you need. Then click `CUSTOM` to change memory size if you need.
 5. In `Boot disk`, change size to your project needs, our project needs roughly 50GB.
 6. On the right, you can see the estimated cost of your VM.
@@ -17,6 +17,7 @@
 	```
 	gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
 	```
+4.  Use it as you use CSE's `attu`.
 
 # Using VM Notes
 1. It is a empty VM, we need to install all needed packages, such as `conda`, `git` etc.
