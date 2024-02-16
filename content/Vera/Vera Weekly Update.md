@@ -17,7 +17,8 @@
 	```
 	gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
 	```
-4.  Use it as you use CSE's `attu`.
+4. Use it as you use CSE's `attu`.
+5. Install some packages, clone some Github projects, etc. Enjoy!
 
 # Using VM Notes
 1. It is a empty VM, we need to install all needed packages, such as `conda`, `git` etc.
