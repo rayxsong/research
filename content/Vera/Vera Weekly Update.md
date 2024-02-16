@@ -20,9 +20,9 @@ I spent some time figuring it out, hope it is useful somehow.
 2. Use `gcloud init` to initialize, and set up passkeys etc.
 3. Then use the information you noted in Google Cloud setup to access your VM, replace with your project ID in step 1, and project zone, VM name in step 3:
 
-	```
-	gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
-	```
+```
+gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
+```
 
 4. Use it as you use CSE's `attu`.
 5. Install some packages, clone some Github projects, etc. Enjoy!
@@ -58,9 +58,9 @@ Note: if you are in `conda`'s `base`,  `conda deactivate` first
 2. Sometimes using `gdown` to download files has permission problems, current solution is going to the root folder, then use `gdown`.
 3. If you want to download a folder on your Google Drive, change the following command to your link and folder path:
 
-	```
-	gdown Google-Drive-Shared-Link -O Folder-Path --folder
-	```
+```
+gdown Google-Drive-Shared-Link -O Folder-Path --folder
+```
 	
 1. Prepare the [W&B API key](https://wandb.ai/authorize) if your code is using `wandb` to monitor training.
 2. `source ~/.bashrc` is a good friend to refresh `bash` and get some your new packages working.
