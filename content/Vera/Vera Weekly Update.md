@@ -47,7 +47,6 @@ gcloud compute scp LOCAL-PATH VM-NAME:VM-PATH
 ```
 
 4. Exit VM, press `~` then `.`
-	Note: if you are in `conda`'s `base`,  `conda deactivate` first
 # Using VM Notes
 1. It is a empty VM, we need to install all needed packages, such as `conda`, `git` etc.
 2. Sometimes using `gdown` to download files has permission problems, current solution is going to the root folder, then use `gdown`.
