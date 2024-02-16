@@ -28,7 +28,7 @@ gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
 5. Install some packages, clone some Github projects, etc. Enjoy!
 
 # Useful gcloud CLI
-1. Now you might want to transfer some files between VM and your local machine, do this authorization first after connecting to your VM:
+1. Now you might want to transfer some files between VM and your local machine. Before that, do this authorization first after connecting to your VM:
 
 ```bash
 gcloud auth login
@@ -46,13 +46,8 @@ gcloud compute scp --recurse VM-NAME:VM-PATH LOCAL-PATH
 gcloud compute scp LOCAL-PATH VM-NAME:VM-PATH
 ```
 
-4. Exit VM:
-
-```bash
-~.
-```
-
-Note: if you are in `conda`'s `base`,  `conda deactivate` first
+4. Exit VM, press `~` then `.`
+	Note: if you are in `conda`'s `base`,  `conda deactivate` first
 # Using VM Notes
 1. It is a empty VM, we need to install all needed packages, such as `conda`, `git` etc.
 2. Sometimes using `gdown` to download files has permission problems, current solution is going to the root folder, then use `gdown`.
