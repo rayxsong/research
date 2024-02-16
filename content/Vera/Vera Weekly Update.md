@@ -1,3 +1,5 @@
+#Cloud
+
 I've noticed that some people, especially those new to cloud computing, find Google Cloud a bit overwhelming. The platform offers many services and features, which can be intimidating for first-time users. Our course website seems to miss this introduction part as well. So I've decided to create this very basic walkthrough to help you set up your first virtual machine (VM) on Google Cloud.
 
 I spent some time figuring it out, hope it is useful somehow.
@@ -25,6 +27,32 @@ I spent some time figuring it out, hope it is useful somehow.
 4. Use it as you use CSE's `attu`.
 5. Install some packages, clone some Github projects, etc. Enjoy!
 
+# Useful gcloud CLI
+1. Now you might want to transfer some files between VM and your local machine, do this authorization first after connecting to your VM:
+
+```
+gcloud auth login
+```
+
+2. Transferring files from VM to local machine, on your **local machine** do the following:
+
+```
+gcloud compute scp --recurse VM-NAME:VM-PATH LOCAL-PATH
+```
+
+3. Transferring files from local machine to VM, on your **local machine** do the following:
+
+```
+gcloud compute scp LOCAL-PATH VM-NAME:VM-PATH
+```
+
+4. Exit VM:
+
+```
+~.
+```
+
+Note: if you are in `conda`'s `base`,  `conda deactivate` first
 # Using VM Notes
 1. It is a empty VM, we need to install all needed packages, such as `conda`, `git` etc.
 2. Sometimes using `gdown` to download files has permission problems, current solution is going to the root folder, then use `gdown`.
@@ -34,7 +62,7 @@ I spent some time figuring it out, hope it is useful somehow.
 	gdown Google-Drive-Shared-Link -O Folder-Path --folder
 	```
 	
-1. Prepare the W&B API key if your code are using `wandb` to monitor training.
+1. Prepare the [W&B API key](https://wandb.ai/authorize) if your code is using `wandb` to monitor training.
 2. `source ~/.bashrc` is a good friend to refresh `bash` and get some your new packages working.
 
 # Before this
