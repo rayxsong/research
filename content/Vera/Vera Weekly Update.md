@@ -1,4 +1,6 @@
+I've noticed that some people, especially those new to cloud computing, find Google Cloud a bit overwhelming. The platform offers many services and features, which can be intimidating for first-time users. Our course website seems to miss this introduction part as well. So I've decided to create this very basic walkthrough to help you set up your first virtual machine (VM) on Google Cloud.
 
+I spent some time figuring it out, hope it is useful somehow.
 ![[gcloud-setup.png]]
 # Google Cloud Setup
 1. Go to upper-left select organization `cs.washington.edu`, then select `My First Project`, remember the project ID.
