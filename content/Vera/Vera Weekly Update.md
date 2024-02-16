@@ -3,7 +3,8 @@ I've noticed that some people, especially those new to cloud computing, find Goo
 I spent some time figuring it out, hope it is useful somehow.
 ![[gcloud-setup.png]]
 # Google Cloud Setup
-1. Go to upper-left select organization `cs.washington.edu`, then select `My First Project`, remember the project ID.
+0. You might need to add your credit/debit card information before all of these.
+1. Go to upper-left select organization `cs.washington.edu`, then select any `My First Project`, remember the project ID.
 2. Go to top search bar, search `COMPUTE ENGINE`.
 3. Click `CREATE INSTANCE`, create name, region, zone for you VM, and take notes for these information now if you don't want to waste time finding them later. We used `us-west` since it shows low CO2.
 4. In `Machine configuration`, select `GPUs`, we used `NVIDIA T4`, select what you need. Then click `CUSTOM` to change memory size if you need.
@@ -16,17 +17,24 @@ I spent some time figuring it out, hope it is useful somehow.
 1. Download and install gcloud CLI [here](https://cloud.google.com/sdk/docs/install).
 2. Use `gcloud init` to initialize, and set up passkeys etc.
 3. Then use the information you noted in Google Cloud setup to access your VM, replace with your project ID in step 1, and project zone, VM name in step 3:
+
 	```
 	gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
 	```
+
 4. Use it as you use CSE's `attu`.
 5. Install some packages, clone some Github projects, etc. Enjoy!
 
 # Using VM Notes
 1. It is a empty VM, we need to install all needed packages, such as `conda`, `git` etc.
-2. Sometimes using `gdown` to download files has permission problems, current solution is got the root folder, the use `gdown`
-3. Prepare the W&B API key if your code are using `wandb` to monitor training.
-4. `source ~/.bashrc` is a good friend when set up some environments.
+2. Sometimes using `gdown` to download files has permission problems, current solution is going to the root folder, then use `gdown`.
+3. If you want to download a folder on your Google Drive, change the following command to your link and folder path:
+
+	```
+	gdown Google-Drive-Shared-Link -O Folder-Path --folder
+	```
+1. Prepare the W&B API key if your code are using `wandb` to monitor training.
+2. `source ~/.bashrc` is a good friend when set up some environments.
 
 # Before this
 We spent a night trying to make Vera running on Colab, but we failed. It seems that Colab doesn't support `conda` very well, this the same issue I had in [[Finite-State Machine]] project. But it was helpful to know you could install some libraries on Colab permanently from [a blog post](https://netraneupane.medium.com/how-to-install-libraries-permanently-in-google-colab-fb15a585d8a5) sent by Jay. So we shifted to Google Cloud, it should work similarly as Colab works except GUI. It turned out, Google Cloud supports `conda` much better than Colab, the environment setup was smooth.
