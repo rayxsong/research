@@ -3,7 +3,9 @@
 I've noticed that some people, especially those new to cloud computing, find Google Cloud a bit overwhelming. The platform offers many services and features, which can be intimidating for first-time users. Our course website seems to miss this introduction part as well. So I've decided to create this very basic walkthrough to help you set up your first virtual machine (VM) on Google Cloud.
 
 I spent some time figuring it out, hope it is useful somehow.
+
 ![[gcloud-setup.png]]
+
 # Google Cloud Setup
 0. You might need to add your credit/debit card information before all of these.
 1. Go to upper-left select organization `cs.washington.edu`, then select any `My First Project`, remember the project ID.
@@ -20,7 +22,7 @@ I spent some time figuring it out, hope it is useful somehow.
 2. Use `gcloud init` to initialize, and set up passkeys etc.
 3. Then use the information you noted in Google Cloud setup to access your VM, replace with your project ID in step 1, and project zone, VM name in step 3:
 
-```
+```bash
 gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
 ```
 
@@ -30,25 +32,25 @@ gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
 # Useful gcloud CLI
 1. Now you might want to transfer some files between VM and your local machine, do this authorization first after connecting to your VM:
 
-```
+```bash
 gcloud auth login
 ```
 
 2. Transferring files from VM to local machine, on your **local machine** do the following:
 
-```
+```bash
 gcloud compute scp --recurse VM-NAME:VM-PATH LOCAL-PATH
 ```
 
 3. Transferring files from local machine to VM, on your **local machine** do the following:
 
-```
+```bash
 gcloud compute scp LOCAL-PATH VM-NAME:VM-PATH
 ```
 
 4. Exit VM:
 
-```
+```bash
 ~.
 ```
 
@@ -58,10 +60,10 @@ Note: if you are in `conda`'s `base`,  `conda deactivate` first
 2. Sometimes using `gdown` to download files has permission problems, current solution is going to the root folder, then use `gdown`.
 3. If you want to download a folder on your Google Drive, change the following command to your link and folder path:
 
-```
+```bash
 gdown Google-Drive-Shared-Link -O Folder-Path --folder
 ```
-	
+
 1. Prepare the [W&B API key](https://wandb.ai/authorize) if your code is using `wandb` to monitor training.
 2. `source ~/.bashrc` is a good friend to refresh `bash` and get some your new packages working.
 
