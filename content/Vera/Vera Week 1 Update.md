@@ -10,7 +10,7 @@ I spent some time figuring it out, hope it is useful somehow.
 2. Go to top search bar, search `COMPUTE ENGINE`.
 3. Click `CREATE INSTANCE`, create name, region, zone for you VM, and take notes for these information now if you don't want to waste time finding them later. We used `us-west` since it shows low CO2.
 4. In `Machine configuration`, select `GPUs`, we are using `NVIDIA T4`, select what you need. If T4 is not available, try other GPUs, like P4. Then click `CUSTOM` to change memory size if you need.
-5. In `Boot disk`, change the size to what your project needs, our project uses roughly 50GB.
+5. In `Boot disk`, change the size to what your project needs, our project uses roughly **100GB**. Please double check the size you need.
 6. On the right, you can see the estimated cost of your whole VM after various configurations.
 7. Then click `CREATE`, and wait 1~2 mins for your VM booting.
 8. Once it is done, you should be able to use SSH or `gcloud CLI` to access your VM.
@@ -161,13 +161,6 @@ gdown Google-Drive-Shared-Link -O Folder-Path --folder
 
 3. Prepare the [W&B API key](https://wandb.ai/authorize) if your code is using `wandb` to monitor training.
 4. `source ~/.bashrc` is a good friend to refresh `bash` and get some your new packages working.
-# Mod Commands for Vera
-```bash
-accelerate launch run.py --train_tasks sciq --valid_tasks sciq --run_name "train"
-
-# use default t5-v1.1-small
-accelerate launch run.py --run_name "train_stage_a"
-```
 # Before this
 We spent a night trying to make Vera running on Colab, but we failed. It seems that Colab doesn't support `conda` very well, this the same issue I had in [[Finite-State Machine]] project. But it was helpful to know you could install some libraries on Colab permanently from [a blog post](https://netraneupane.medium.com/how-to-install-libraries-permanently-in-google-colab-fb15a585d8a5) sent by Jay. So we shifted to Google Cloud, it should work similarly as Colab works except GUI. It turned out, Google Cloud supports `conda` much better than Colab, the environment setup was smooth.
 # Related Links
