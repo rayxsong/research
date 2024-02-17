@@ -9,11 +9,11 @@ I spent some time figuring it out, hope it is useful somehow.
 1. Go to upper-left select organization `cs.washington.edu`, then select any `My First Project`, remember the project ID.
 2. Go to top search bar, search `COMPUTE ENGINE`.
 3. Click `CREATE INSTANCE`, create name, region, zone for you VM, and take notes for these information now if you don't want to waste time finding them later. We used `us-west` since it shows low CO2.
-4. In `Machine configuration`, select `GPUs`, we used `NVIDIA T4`, select what you need. Then click `CUSTOM` to change memory size if you need.
-5. In `Boot disk`, change size to your project needs, our project needs roughly 50GB.
-6. On the right, you can see the estimated cost of your VM.
+4. In `Machine configuration`, select `GPUs`, we are using `NVIDIA T4`, select what you need. Then click `CUSTOM` to change memory size if you need.
+5. In `Boot disk`, change the size to what your project needs, our project uses roughly 50GB.
+6. On the right, you can see the estimated cost of your whole VM after various configurations.
 7. Then click `CREATE`, and wait 1~2 mins for your VM booting.
-8. Once it is done, you could use SSH or gcloud CLI to access your VM.
+8. Once it is done, you should be able to use SSH or `gcloud CLI` to access your VM.
 
 # Using gcloud CLI
 1. Download and install gcloud CLI [here](https://cloud.google.com/sdk/docs/install).
@@ -24,8 +24,7 @@ I spent some time figuring it out, hope it is useful somehow.
 gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
 ```
 
-4. Use it as you use CSE's `attu`.
-5. Install some packages, clone some Github projects, etc. Enjoy!
+4. Use it as you use CSE's `attu`. Install some packages, clone some Github projects, etc. Enjoy!
 
 # Useful gcloud CLI
 1. Now you might want to transfer some files between VM and your local machine. Before that, do this authorization first after connecting to your VM:
@@ -47,18 +46,111 @@ gcloud compute scp LOCAL-PATH VM-NAME:VM-PATH
 ```
 
 4. Exit VM, press `~` then `.`
+# Install Everything on VM
+
+```bash
+# update and install essential
+sudo apt-get update
+sudo apt-get install build-essential
+
+# install CUDA in the version of your system
+wget https://developer.download.nvidia.com/compute/cuda/12.3.2/local_installers/cuda_12.3.2_545.23.08_linux.run
+sudo sh cuda_12.3.2_545.23.08_linux.run
+
+# install conda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash ~/miniconda3/miniconda.sh -b -u
+
+conda init
+# restart bash
+source ~/.bashrc
+
+# create env
+conda env create -f environment.yml
+conda activate vera
+
+# install notebook
+pip install -U jupyter
+```
+
+# Use VSCode with VM
+1. Install the extension Remote-SSH
+2. `gcloud init`
+3. `gcloud compute config-ssh`
+4. Add a remote `ssh your-host`
+5. Connect
+
+# Safely Exit the SSH
+To start a training process on a virtual machine (VM) in the cloud and safely exit the SSH session without interrupting the training, you can use `tmux`.
+
+```bash
+# connect to ssh
+ssh your-host
+# or
+gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
+
+# install tmux
+sudo apt-get update
+sudo apt-get install tmux
+
+# start a new session
+tmux new -s training_session # change training_session to a desired name
+
+# run your scripts, something like this
+accelerate launch your_training_script.py
+
+# detach from the current session
+# Press `Ctrl` + `b`, then release both keys.
+# Press `d` to detach from the session.
+
+# exit ssh safely
+exit
+```
+# Use Colab's VM
+I found this temporary solution using Colab as some T4 are not available. Basically, it allows you to run the terminal in blocks and you can do everything you want to do on a VM, even if you don't have Colab Pro. Here is [the notebook](https://colab.research.google.com/drive/1_sSWUsLWg2c7aHo4lHW70-MSM6Ywvp98?usp=sharing). Make sure to connect to T4 runtime if you want to use the GPU.
+
+```
+!pip install colab-xterm
+%load_ext colabxterm
+%xterm
+```
+
+If you want to use conda:
+
+```bash
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+
+vim ~/.zshrc
+
+# add export PATH="/root/miniconda3/bin:$PATH"
+
+source ~/.zshrc
+
+conda init
+
+source ~/.bashrc
+```
+
 # Using VM Notes
 1. It is a empty VM, we need to install all needed packages, such as `conda`, `git` etc.
-2. Sometimes using `gdown` to download files has permission problems, current solution is going to the root folder, then use `gdown`.
-3. If you want to download a folder on your Google Drive, change the following command to your link and folder path:
+2. If you want to download a folder on your Google Drive, change the following command to your link and folder path:
 
 ```bash
 gdown Google-Drive-Shared-Link -O Folder-Path --folder
 ```
 
-1. Prepare the [W&B API key](https://wandb.ai/authorize) if your code is using `wandb` to monitor training.
-2. `source ~/.bashrc` is a good friend to refresh `bash` and get some your new packages working.
+3. Prepare the [W&B API key](https://wandb.ai/authorize) if your code is using `wandb` to monitor training.
+4. `source ~/.bashrc` is a good friend to refresh `bash` and get some your new packages working.
+# Mod Commands for Vera
+```bash
+accelerate launch run.py --train_tasks sciq --valid_tasks sciq --run_name "train"
 
+# use default t5-v1.1-small
+accelerate launch run.py --run_name "train_stage_a"
+```
 # Before this
 We spent a night trying to make Vera running on Colab, but we failed. It seems that Colab doesn't support `conda` very well, this the same issue I had in [[Finite-State Machine]] project. But it was helpful to know you could install some libraries on Colab permanently from [a blog post](https://netraneupane.medium.com/how-to-install-libraries-permanently-in-google-colab-fb15a585d8a5) sent by Jay. So we shifted to Google Cloud, it should work similarly as Colab works except GUI. It turned out, Google Cloud supports `conda` much better than Colab, the environment setup was smooth.
 # Related Links

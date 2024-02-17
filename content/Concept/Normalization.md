@@ -1,6 +1,8 @@
 #Deep-Learning #Concept
 Standardization and Normalization are different. Standardization makes mean 0 and variance 1, while Normalization makes inputs to be between 0 and 1.
 
+(data - mean) /  standard deviation
+
 Why
 It would be easier make network to learn(still vague about this idea).
 If not, the weights in the network would be very different. Think about numbers are small and big, output would be unstable.
@@ -14,3 +16,13 @@ Batch Normalization normalizes all layers of output.
 
 Decide if you put BN before or after activation functions.
 Maybe don't need to use bias, because BN used offset.
+
+hard to use with sequence and small batch, hard to parrallel
+
+Layer Normalization
+batter for RNNs
+can deal with sequences
+any batch number works
+can parallelize
+
+not good with CNNs
