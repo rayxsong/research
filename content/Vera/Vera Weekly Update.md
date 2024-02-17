@@ -9,14 +9,14 @@ I spent some time figuring it out, hope it is useful somehow.
 1. Go to upper-left select organization `cs.washington.edu`, then select any `My First Project`, remember the project ID.
 2. Go to top search bar, search `COMPUTE ENGINE`.
 3. Click `CREATE INSTANCE`, create name, region, zone for you VM, and take notes for these information now if you don't want to waste time finding them later. We used `us-west` since it shows low CO2.
-4. In `Machine configuration`, select `GPUs`, we are using `NVIDIA T4`, select what you need. Then click `CUSTOM` to change memory size if you need.
+4. In `Machine configuration`, select `GPUs`, we are using `NVIDIA T4`, select what you need. If T4 is not available, try other GPUs, like P4. Then click `CUSTOM` to change memory size if you need.
 5. In `Boot disk`, change the size to what your project needs, our project uses roughly 50GB.
 6. On the right, you can see the estimated cost of your whole VM after various configurations.
 7. Then click `CREATE`, and wait 1~2 mins for your VM booting.
 8. Once it is done, you should be able to use SSH or `gcloud CLI` to access your VM.
 
 # Using gcloud CLI
-1. Download and install gcloud CLI [here](https://cloud.google.com/sdk/docs/install).
+1. Download and install **gcloud CLI** [here](https://cloud.google.com/sdk/docs/install).
 2. Use `gcloud init` to initialize, and set up passkeys etc.
 3. Then use the information you noted in Google Cloud setup to access your VM, replace with your project ID in step 1, and project zone, VM name in step 3:
 
@@ -94,7 +94,7 @@ sudo apt-get update
 sudo apt-get install tmux
 
 # start a new session
-tmux new -s training_session # change training_session to a desired name
+tmux new -s your_training_session
 
 # run your scripts, something like this
 accelerate launch your_training_script.py
@@ -105,6 +105,16 @@ accelerate launch your_training_script.py
 
 # exit ssh safely
 exit
+```
+
+If you want reattach to your session:
+
+```bash
+# connect to ssh
+ssh your-host
+
+# reattach
+tmux attach -t your_training_session
 ```
 # Use Colab's VM
 I found this temporary solution using Colab as some T4 are not available. Basically, it allows you to run the terminal in blocks and you can do everything you want to do on a VM, even if you don't have Colab Pro. Here is [the notebook](https://colab.research.google.com/drive/1_sSWUsLWg2c7aHo4lHW70-MSM6Ywvp98?usp=sharing). Make sure to connect to T4 runtime if you want to use the GPU.
@@ -118,6 +128,7 @@ I found this temporary solution using Colab as some T4 are not available. Basica
 If you want to use conda:
 
 ```bash
+# install conda
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
@@ -126,6 +137,7 @@ rm -rf ~/miniconda3/miniconda.sh
 vim ~/.zshrc
 
 # add export PATH="/root/miniconda3/bin:$PATH"
+# use ':wq!' to save and quit vim
 
 source ~/.zshrc
 
