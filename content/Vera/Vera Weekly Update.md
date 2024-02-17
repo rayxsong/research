@@ -26,7 +26,7 @@ gcloud compute ssh --project=project-id --zone=project-zone your-VM-name
 
 4. Use it as you use CSE's `attu`. Install some packages, clone some Github projects, etc. Enjoy!
 
-# Useful gcloud CLI
+# Useful gcloud commands
 1. Now you might want to transfer some files between VM and your local machine. Before that, do this authorization first after connecting to your VM:
 
 ```bash
@@ -113,13 +113,18 @@ If you want reattach to your session:
 # connect to ssh
 ssh your-host
 
+# check processes you have
+nvidia-smi
+
 # reattach
 tmux attach -t your_training_session
 ```
 # Use Colab's VM
 I found this temporary solution using Colab as some T4 are not available. Basically, it allows you to run the terminal in blocks and you can do everything you want to do on a VM, even if you don't have Colab Pro. Here is [the notebook](https://colab.research.google.com/drive/1_sSWUsLWg2c7aHo4lHW70-MSM6Ywvp98?usp=sharing). Make sure to connect to T4 runtime if you want to use the GPU.
 
-```
+Add a following block:
+
+```Python
 !pip install colab-xterm
 %load_ext colabxterm
 %xterm
