@@ -34,4 +34,5 @@ accelerate launch run.py --run_name "train_stage_a"
 ```
 
 I didn't expect it downloaded another **44.5GB** dataset in stage a. It was safe that I upgraded the disk to 100GB. 😌
+
 For stage a, I think the estimated time is about 8 hours, I could go to sleep now.
