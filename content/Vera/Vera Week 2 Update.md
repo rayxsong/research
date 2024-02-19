@@ -36,3 +36,15 @@ accelerate launch run.py --run_name "train_stage_a"
 I didn't expect it downloaded another **44.5GB** dataset in stage a. It was safe that I upgraded the disk to 100GB. 😌
 
 For stage a, I think the estimated time is about 8 hours, I could go to sleep now.
+
+/home/raysong/vera/runs/train_stage_a/model
+
+accelerate launch run.py --load_from_ckpt ~/vera/runs/train_stage_a/model/ckp_48000.pth --run_name "train_stage_b"
+
+accelerate launch run.py --mode eval --load_from_ckpt ~/vera/runs/train/model/ckp_29000.pth --eval_tasks sciq --run_name "eval"
+
+1. sciq
+2. csqa2
+3. train_stage_a
+
+accelerate launch run.py --mode eval --load_from_ckpt ~/vera/runs/train_stage_b/model/ckp_14000.pth --run_name "eval_stage_b"

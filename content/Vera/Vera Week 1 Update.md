@@ -156,7 +156,11 @@ source ~/.bashrc
 2. If you want to download a folder on your Google Drive, change the following command to your link and folder path:
 
 ```bash
-gdown Google-Drive-Shared-Link -O Folder-Path --folder
+# install gdown
+conda install conda-forge::gdown
+
+# download a folder
+gdown Google-Drive-Shared-Link -O Local-Folder-Path --folder
 ```
 
 3. Prepare the [W&B API key](https://wandb.ai/authorize) if your code is using `wandb` to monitor training.

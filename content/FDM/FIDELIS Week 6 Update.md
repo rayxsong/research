@@ -1,1 +1,0 @@
-All the previous  related work we have seen should fall in the category of "Tool Path Generation".
