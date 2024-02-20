@@ -89,3 +89,8 @@ accelerate launch \
 10. **`run.py`**: This is the name of the Python script to be executed for training.
 11. **`--model_type google/t5-v1_1-xxl`**: This specifies the type of model to be used for training. In this case, it's set to `google/t5-v1_1-xxl`, which is a specific version of the T5 model.
 12. **`--run_name "train_stage_a"`**: This sets the name of the training run, which can be useful for logging and tracking purposes. In this case, it's set to `"train_stage_a"`.
+
+# Midway Report
+We have finished our midway report. 🎉
+
+![[447_Midway_Report.pdf]]
