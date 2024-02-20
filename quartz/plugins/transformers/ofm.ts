@@ -236,10 +236,17 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                       value: `<audio src="${url}" controls></audio>`,
                     }
                   } else if ([".pdf"].includes(ext)) {
+                    // return {
+                    //   type: "html",
+                    //   value: `<iframe src="${url}"></iframe>`,
+                    // }
+                    const match = wikilinkImageEmbedRegex.exec(alias ?? "");
+                    const width = match?.groups?.width ?? "auto";
+                    const height = match?.groups?.height ?? "auto";
                     return {
                       type: "html",
-                      value: `<iframe src="${url}"></iframe>`,
-                    }
+                      value: `<iframe src="${url}" width="${width}" height="${height}"></iframe>`,
+                    };
                   } else {
                     const block = anchor
                     return {

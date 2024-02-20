@@ -2,7 +2,7 @@ I've noticed that some people, especially those new to cloud computing, find Goo
 
 I spent some time figuring it out, hope it is useful somehow.
 
-![[gcloud-setup.png]]
+![[gcloud-setup.png | 800]]
 
 # Google Cloud Setup
 0. You might need to add your credit/debit card information before all of these.

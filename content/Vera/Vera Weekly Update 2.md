@@ -93,4 +93,4 @@ accelerate launch \
 # Midway Report
 We have finished our midway report. 🎉
 
-![[447_Midway_Report.pdf]]
+![[447_Midway_Report.pdf|800x400]]
