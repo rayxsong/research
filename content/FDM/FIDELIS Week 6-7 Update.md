@@ -1,4 +1,7 @@
 All the previous  related work we have seen should fall in the category of "Tool Path Generation".
+
+Git Repo
+Online [Demo](https://rayxsong.github.io/p5.fab-FIDELIS/editor/index.html)
 # FIDELIS Extension
 ## GCode Commands
 - printGCode(): Logs all G-code commands to the console with their corresponding index numbers.
@@ -10,6 +13,8 @@ All the previous  related work we have seen should fall in the category of "Tool
 - randomPoint(x, y, z): Generates a random point within the specified bounds, or the maximum bounds if none are provided.
 
 # Ongoing Work
+- [x] optimize the menu
+- [x] upload/save gcode
 - [ ] extrusion amount config
 - [x] print point to point
 - [ ] solely retraction
