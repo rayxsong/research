@@ -95,4 +95,4 @@ We have finished our midway report. 🎉
 
 ![[447_Midway_Report.pdf|800x400]]
 
-<iframe src="https://wandb.ai/nlp-vera/vera/reports/Vera-Extension-Midway--Vmlldzo2ODUxOTAx">
+<iframe src="https://wandb.ai/nlp-vera/vera/reports/Vera-Extension-Midway--Vmlldzo2ODUxOTAx?accessToken=blb6exf7cj5md8ld0l7m9ul8aeff2eeoxcmnh1c790rys3ka2twfmtmw5x9b91ql"></iframe>

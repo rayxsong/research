@@ -241,12 +241,12 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                       value: `<iframe src="${url}" width="${width}" height="${height}"></iframe>`,
                     };
                     // if it contains iframe, then it's an embed
-                  } else if (["</iframe>"].includes(alias)) {
-                    return {
-                      type: "html",
-                      value: alias,
-                    }
-                  } else {
+                  // } else if (["</iframe>"].includes(alias)) {
+                  //   return {
+                  //     type: "html",
+                  //     value: alias,
+                  //   }
+                  }else {
                     const block = anchor
                     return {
                       type: "html",
