@@ -19,3 +19,7 @@ Online [Demo](https://rayxsong.github.io/p5.fab-FIDELIS/editor/index.html)
 - [x] print point to point
 - [ ] solely retraction
 - [x] random points
+
+p5.js Sketch test:
+- [[sketch 1]]
+- [[sketch 2]]
