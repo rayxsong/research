@@ -207,11 +207,11 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                 if (value.startsWith("!")) {
                   const ext: string = path.extname(fp).toLowerCase()
                   const url = slugifyFilePath(fp as FilePath)
+                  const match = wikilinkImageEmbedRegex.exec(alias ?? "")
+                  const alt = match?.groups?.alt ?? ""
+                  const width = match?.groups?.width ?? "auto"
+                  const height = match?.groups?.height ?? "auto"
                   if ([".png", ".jpg", ".jpeg", ".gif", ".bmp", ".svg", ".webp"].includes(ext)) {
-                    const match = wikilinkImageEmbedRegex.exec(alias ?? "")
-                    const alt = match?.groups?.alt ?? ""
-                    const width = match?.groups?.width ?? "auto"
-                    const height = match?.groups?.height ?? "auto"
                     return {
                       type: "image",
                       url,
@@ -226,8 +226,8 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                   } else if ([".mp4", ".webm", ".ogv", ".mov", ".mkv"].includes(ext)) {
                     return {
                       type: "html",
-                      value: `<video src="${url}" controls></video>`,
-                    }
+                      value: `<video src="${url}" width="${width}" height="${height}" controls></video>`,
+                    };
                   } else if (
                     [".mp3", ".webm", ".wav", ".m4a", ".ogg", ".3gp", ".flac"].includes(ext)
                   ) {
@@ -236,13 +236,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                       value: `<audio src="${url}" controls></audio>`,
                     }
                   } else if ([".pdf"].includes(ext)) {
-                    // return {
-                    //   type: "html",
-                    //   value: `<iframe src="${url}"></iframe>`,
-                    // }
-                    const match = wikilinkImageEmbedRegex.exec(alias ?? "");
-                    const width = match?.groups?.width ?? "auto";
-                    const height = match?.groups?.height ?? "auto";
                     return {
                       type: "html",
                       value: `<iframe src="${url}" width="${width}" height="${height}"></iframe>`,
