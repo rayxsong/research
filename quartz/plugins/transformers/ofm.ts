@@ -240,12 +240,21 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                       type: "html",
                       value: `<iframe src="${url}" width="${width}" height="${height}"></iframe>`,
                     };
-                    // if it contains iframe, then it's an embed
-                  // } else if (["</iframe>"].includes(alias)) {
-                  //   return {
-                  //     type: "html",
-                  //     value: alias,
-                  //   }
+                    // p5.js embed
+                    // <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+                    // <script src="path/to/your-sketch.js"></script>
+                  } else if ([".js"].includes(ext)) {
+                    // if name contains p5 then embed p5.js
+                    if (fp.includes("p5")) {
+                      return {
+                        type: "html",
+                        // change p5 canvas size to width and height
+                        // <canvas id="defaultCanvas0" class="p5Canvas" width="800" height="800" style="width: 400px; height: 400px;"></canvas>
+                        value: `<div id="p5-container" width="200" height="200">
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+                                <script src="${url}"></script></div>`,
+                      }
+                    }
                   }else {
                     const block = anchor
                     return {
