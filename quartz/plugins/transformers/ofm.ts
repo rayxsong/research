@@ -250,7 +250,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                         type: "html",
                         // change p5 canvas size to width and height
                         // <canvas id="defaultCanvas0" class="p5Canvas" width="800" height="800" style="width: 400px; height: 400px;"></canvas>
-                        value: `<div id="p5-container" width="200" height="200">
+                        value: `<div id="p5-container" width=auto height=100%>
                                 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
                                 <script src="${url}"></script></div>`,
                       }
