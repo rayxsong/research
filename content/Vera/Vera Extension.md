@@ -12,6 +12,8 @@ on commonsense knowledge.
 
 - [[Vera Weekly Update 2]]
 - [[Vera Weekly Update 1]]
+
+![[vera.pdf]]
 #### Related Links:
 - Repository: [https://github.com/liujch1998/vera](https://github.com/liujch1998/vera)
 - Paper: [https://arxiv.org/abs/2305.03695](https://arxiv.org/abs/2305.03695)
