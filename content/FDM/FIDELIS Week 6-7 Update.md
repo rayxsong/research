@@ -20,6 +20,7 @@ Online [Demo](https://rayxsong.github.io/p5.fab-FIDELIS/editor/index.html)
 - [ ] solely retraction
 - [x] random points
 
+---
 p5.js Sketch test:
-- [[sketch 1]]
-- [[sketch 2]]
+- [sketch 1](https://rayxsong.github.io/research/editor/sketch/sketch-1)
+- [sketch 2](https://rayxsong.github.io/research/editor/sketch/sketch-2)
