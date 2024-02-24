@@ -1,0 +1,1 @@
+- [Imitating Shortest Paths in Simulation Enables Effective Navigation and Manipulation in the Real World](https://spoc-robot.github.io/)
