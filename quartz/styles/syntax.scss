@@ -2,9 +2,14 @@ code[data-theme*=" "] {
   color: var(--shiki-light);
   background-color: var(--shiki-light-bg);
 }
-
 code[data-theme*=" "] span {
   color: var(--shiki-light);
+}
+
+// add color for python language
+code[lang="python"] {
+  color: var(--shiki-python);
+  background-color: var(--shiki-python-bg);
 }
 
 [saved-theme="dark"] code[data-theme*=" "] {

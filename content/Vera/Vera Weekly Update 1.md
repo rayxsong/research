@@ -125,7 +125,7 @@ I found this temporary solution using Colab as some T4 are not available. Basica
 
 Add a following block:
 
-```Python
+```python
 !pip install colab-xterm
 %load_ext colabxterm
 %xterm

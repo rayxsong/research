@@ -24,7 +24,7 @@ A series of problems popped up during the evaluation. To replicate the paper, we
 
 The first issue is that one of requirements is to convert datasets to [UnifiedQA](https://github.com/allenai/unifiedqa) format using a [question converting model](https://github.com/allenai/unifiedqa) which is deleted for some reason. Luckily, I found [this model](https://huggingface.co/domenicrosati/question_converter-3b) on Hugging Face, and it is convenient that we could use directly using `transformers` library.
 
-```Python
+```python
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 tokenizer = AutoTokenizer.from_pretrained("domenicrosati/question_converter-3b")
@@ -67,7 +67,7 @@ Through this investigation of some commonsense datasets, I found that even for m
 
 # Accelerate Lib Parameters
 
-```Python
+```python
 accelerate launch \
     --num_processes 64 \
     --mixed_precision bf16 \

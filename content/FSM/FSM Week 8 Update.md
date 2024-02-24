@@ -22,7 +22,7 @@ git clone https://github.com/fgmacedo/python-statemachine.git
 
 ### Import and Draw Graph
 
-```Python
+```python
 # import packages
 from statemachine import StateMachine, State
 from IPython.display import Image, display, clear_output
@@ -46,7 +46,7 @@ def view_pydot(pdot):
 ```
 ### FSM class
 
-```Python
+```python
 class FSM(StateMachine): 
     stop = State(initial=True)
     rotate = State()
@@ -123,7 +123,7 @@ class FSM(StateMachine):
         return False
 ```
 ### Modify `play_env`
-```Python
+```python
 def play_env(env, args, config):
 	fsm = FSM()
 	# rest of code
