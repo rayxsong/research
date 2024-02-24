@@ -20,6 +20,7 @@ conda install Graphviz
 git clone https://github.com/fgmacedo/python-statemachine.git
 ```
 
+All the following changes are based on `examples/interactive_play.py`.
 ### Import and Draw Graph
 
 ```python
@@ -46,7 +47,7 @@ def view_pydot(pdot):
 ```
 ### FSM class
 
-```python
+```python {69-74}
 class FSM(StateMachine): 
     stop = State(initial=True)
     rotate = State()
