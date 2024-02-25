@@ -26,7 +26,8 @@ export default ((opts?: Options) => {
           ))}
         </ul> */}
         <p>
-          Documented by Ray Song © {year}
+          <a href="./Website-Notes">Notes</a> about this website.
+          Documented by <b>Ray Song</b> © {year}.
         </p>
       </footer>
     )
