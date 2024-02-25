@@ -135,7 +135,7 @@ a {
   }
 
   & > #quartz-body {
-    width: 80%;
+    width: 100%;
     display: flex;
     @media all and (max-width: $fullPageWidth) {
       flex-direction: column;
@@ -455,7 +455,7 @@ p > img + em {
 }
 
 hr {
-  width: 100%;
+  width: $pageWidth;
   margin: 2rem auto;
   height: 1px;
   border: none;

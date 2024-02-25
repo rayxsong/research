@@ -3,8 +3,8 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Research Notes",
-    enableSPA: true,
+    pageTitle: "Research Notes 🕸️",
+    enableSPA: false,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
