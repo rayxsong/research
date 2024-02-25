@@ -1,12 +1,12 @@
-We solved a major problem that we have been struggling for several weeks. We have been looking for a combination of a good simulator and a FSM visualizer. We are using Habitat, but we didn't find any suitable FSM visualization tool.
+A major problem that we have been struggling for several weeks is almost solved. We have been looking for a combination of a good simulator and a FSM visualizer. We are using Habitat, but we didn't find any suitable FSM visualization tool.
 
-Robin just found a python library that can do great job on FSM visualization - [Python State Machine](https://python-statemachine.readthedocs.io/en/latest/index.html). It can generate clear FSM, just like SMACH. Here is an example of a number guessing machine.
+Robin just found a python library that can do great job on FSM visualization - [Python State Machine](https://python-statemachine.readthedocs.io/en/latest/index.html). It can generate clear FSM graphs, just like SMACH. Here is an example of a number guessing machine.
 
 ![[FSM-guessing.png]]
 
-Robin also implemented this library into Habitat, and it works well as a time based moving robot. There still have two problems to solve: the keyboard doesn't work and `pygame` frame-rate gets extremely low after implementing FSM visualizer.
+Robin also implemented this library into Habitat, and it works well as a time based moving robot. There still have two issues with the code: the keyboard doesn't work and `pygame` frame-rate gets extremely low after implementing FSM visualizer.
 
-I tried to solve them, and the keyboard one has solved. The low frame-rate was caused by every time it generates a graph as a `png` image file, and for every frame the visualizer is updating the graph. I partially solved this by asking it just generate a graph only when the state changes. The result gets slightly better, the frame-rate is high when the robot keeps in the current state. When it changes between states, the frame-rate is slow as before but the experience is much better. If the graph is something like a canvas with draggable nodes not images, I think this problem would be solved.
+I tried to resolve them, and the keyboard one has been done. And I found that the low frame-rate was caused by the state machine's graph generations(as a `png` image file), and the visualizer is updating the graph for every frame in `pygame`. I partially resolved this by making it generate a graph only when the state changes. The result gets slightly better, the frame-rate is high as usual when the robot keeps in the current state. However, when it changes between states, the frame-rate is slow but the general experience is much better. If the graph is something like a canvas with draggable nodes not rendering as some static images, I think this problem would be solved.
 
 ![[FSM-Visualizer.mov]]
 
@@ -122,15 +122,15 @@ class FSM(StateMachine):
             return True
         return False
 ```
-### Modify `play_env`
+### Update `play_env`
 ```python
 def play_env(env, args, config):
 	fsm = FSM()
 	# rest of code
 	while True:
 		try:
-            fsm.transition()
-        except Exception as e:
-            print(e)
+			fsm.transition()
+		except Exception as e:
+			print(e)
     # rest of code
 ```
