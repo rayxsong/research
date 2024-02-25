@@ -19,8 +19,7 @@ conda install Graphviz
 
 git clone https://github.com/fgmacedo/python-statemachine.git
 ```
-
-All the following changes are based on `examples/interactive_play.py`.
+All the following changes are based on `examples/interactive_play.py`.  Here is also a [Colab version](https://colab.research.google.com/drive/1TyVxpmU-dnf9RTEJiQWJg2A8s6pbidem?usp=sharing) you can play with.
 ### Import and Draw Graph
 
 ```python
