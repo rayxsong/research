@@ -6,12 +6,6 @@ code[data-theme*=" "] span {
   color: var(--shiki-light);
 }
 
-// add color for python language
-code[lang="python"] {
-  color: var(--shiki-python);
-  background-color: var(--shiki-python-bg);
-}
-
 [saved-theme="dark"] code[data-theme*=" "] {
   color: var(--shiki-dark);
   background-color: var(--shiki-dark-bg);
