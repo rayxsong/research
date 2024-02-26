@@ -59,15 +59,22 @@ sudo sh cuda_12.3.2_545.23.08_linux.run
 
 # install conda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash ~/miniconda3/miniconda.sh -b -u
+bash Miniconda3-latest-Linux-x86_64.sh -b -u
 
+vim ~/.zshrc
+ 
+# add export PATH="~/miniconda3/bin:$PATH"
+# use ':wq!' to save and quit vim
+ 
+source ~/.zshrc
+ 
 conda init
-# restart bash
+ 
 source ~/.bashrc
 
 # create env
-conda env create -f environment.yml
-conda activate vera
+conda env-name create -f environment.yml
+conda activate env-name
 
 # install notebook
 pip install -U jupyter
