@@ -47,7 +47,11 @@ gcloud compute scp LOCAL-PATH VM-NAME:VM-PATH
 
 4. Exit VM, press `~` then `.`
 # Install Everything on VM
-
+If you don't want to copy & paste line by line, use this one line command instead:
+```shell
+wget -O setup.sh https://raw.githubusercontent.com/rayxsong/vera-extension/master/setup.sh && bash setup.sh
+```
+The command above should handle CUDA and `Conda` installation, and have basic `Conda` ready.
 ```bash
 # update and install essential
 sudo apt-get update
