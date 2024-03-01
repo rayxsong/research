@@ -10,13 +10,17 @@ tags:
 
 DiffSinger, an acoustic model for SVS based on the diffusion probabilistic model.
 
-- [[Diffsinger Week 2 Update]]
-- [[Diffsinger Week 1 Update]]
+- [[Diffsinger Weekly Update 3]]
+- [[Diffsinger Weekly Update 2]]
+- [[Diffsinger Weekly Update 1]]
 
 TODO:
-- [ ] Deploy locally  
+- [ ] Document milestone
+- [x] Deploy on VM 
 - [x] Know more about standard Diffusion model
+- [ ] move project proposal to main folder
 
+![[DiffSinger-paper.pdf|800x400]]
 #### Related Links:
 - Repository: https://github.com/MoonInTheRiver/DiffSinger
 - Paper:  https://arxiv.org/abs/2105.02446

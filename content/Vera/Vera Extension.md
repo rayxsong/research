@@ -14,7 +14,7 @@ on commonsense knowledge.
 - [[Vera Weekly Update 2]]
 - [[Vera Weekly Update 1]]
 
-![[vera.pdf]]
+![[vera-paper.pdf]]
 
 ---
 

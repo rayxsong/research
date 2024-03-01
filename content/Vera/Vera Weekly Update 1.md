@@ -48,8 +48,9 @@ gcloud compute scp LOCAL-PATH VM-NAME:VM-PATH
 4. Exit VM, press `~` then `.`
 # Install Everything on VM
 If you don't want to copy & paste line by line, use this one line command instead:
-```shell
-wget -O setup.sh https://raw.githubusercontent.com/rayxsong/vera-extension/master/setup.sh && bash setup.sh
+```bash
+wget -O setup.sh https://raw.githubusercontent.com/rayxsong/vera-extension/master/setup.sh && chmod +x setup.sh && bash setup.sh
+
 ```
 The command above should handle CUDA and `Conda` installation, and have basic `Conda` ready.
 ```bash
@@ -65,10 +66,7 @@ sudo sh cuda_12.3.2_545.23.08_linux.run
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -b -u
 
-vim ~/.zshrc
- 
-# add export PATH="~/miniconda3/bin:$PATH"
-# use ':wq!' to save and quit vim
+echo 'export PATH="~/miniconda3/bin:$PATH"' >> ~/.zshrc
  
 source ~/.zshrc
  

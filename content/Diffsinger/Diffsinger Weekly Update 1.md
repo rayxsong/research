@@ -10,7 +10,6 @@ It contains a [step by step tutorial](https://github.com/openvpi/MakeDiffSinger/
 
 >Forced alignment is a technique to take an orthographic transcription of an audio file and generate a time-aligned version using a pronunciation dictionary to look up phones for words.
 
-
 # Definition Clarification
 ## Vocoder
 Vocoder has a long interesting history. Currently, I understand it as a encoder and decoder tool that can output synthesized sounds based on the input. It sounds like auto-tone in some music application, but they are different. [A good explanation](https://www.reddit.com/r/passcode/comments/v3aw0m/vocoder_and_autotune_whats_the_difference/) I found is:
