@@ -21,6 +21,9 @@ TODO:
 - [ ] move project proposal to main folder
 
 ![[DiffSinger-paper.pdf|800x800]]
+
+---
+
 #### Related Links:
 - Repository: https://github.com/MoonInTheRiver/DiffSinger
 - Paper:  https://arxiv.org/abs/2105.02446
