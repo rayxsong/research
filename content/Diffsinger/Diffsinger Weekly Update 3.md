@@ -20,5 +20,6 @@ https://drive.google.com/drive/folders/1PeiqJu7w6yDMuU8WOwvcmT6bMogVWaO2?usp=sha
 https://lightning.ai/docs/torchmetrics/stable/regression/kl_divergence.html
 https://pytorch.org/docs/stable/generated/torch.nn.functional.kl_div.html
 
+![[493G_Milestone_Report.pdf]]
 
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="600" src="https://www.comet.com/rayxsong/diffsinger/reports/diffsinger-milestone-report?shareable=nRLXlLxpteU0YW8wiFoLlrzSx">
