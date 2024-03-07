@@ -1,3 +1,7 @@
+Since the Habitat itself is hard to navigate, we are trying to set up Home Robot, another version of Habitat with better stretch implementation.
+
+Nick helped us get the access to the Capstone Lab in CSE2 Undergrad Commons. And Micheal helped us set up a machine with Home Robot and tested it running Home Robot successfully. Shout out to them!
+
 ```python
 # download test point nav dataset
 python -m habitat_sim.utils.datasets_download --uids habitat_test_scenes habitat_test_pointnav_dataset
@@ -22,8 +26,6 @@ https://wwj718.github.io/post/%E7%BC%96%E7%A8%8B/autonomous-agent-in-roblox/
 https://github.com/bblais/RobotSim373
 
 https://github.com/NISYSLAB/Emory-BMI-GSoC
-
-Nick helped us get the access to the Capstone Lab in CSE2 Undergrad Commons. And Micheal helped us set up a machine with Home Robot and tested it running Home Robot successfully. Shout out to them!
 
 # SSH without Password
 #MYLE

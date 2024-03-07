@@ -10,7 +10,7 @@ tags:
 Vera, a general-purpose model that estimates the plausibility of declarative statements based 
 on commonsense knowledge.
 
-- [[Vera Weekly Update 3]]
+- [[Vera/Vera Weekly Update 3]]
 - [[Vera Weekly Update 2]]
 - [[Vera Weekly Update 1]]
 
