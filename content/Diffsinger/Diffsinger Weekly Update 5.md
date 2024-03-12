@@ -1,1 +1,0 @@
-![[diffsinger-poster.jpeg]]

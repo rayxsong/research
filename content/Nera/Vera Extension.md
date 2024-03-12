@@ -4,15 +4,20 @@ draft: false
 tags:
   - NLP
 ---
-# Vera: A General-Purpose Plausibility Estimation Model for Commonsense Statements
+# NERA - Pure Negations to Enhance Small LM  Performance on Boolean Commonsense:  Replication and Extension of VERA*
+
+## Vera: A General-Purpose Plausibility Estimation Model for Commonsense Statements
 447 Final Project
 
 Vera, a general-purpose model that estimates the plausibility of declarative statements based 
 on commonsense knowledge.
 
-- [[Vera/Vera Weekly Update 3]]
-- [[Vera Weekly Update 2]]
-- [[Vera Weekly Update 1]]
+- [[Nera Outcome]]
+- [[Nera Weekly Update 5]]
+- [[Nera Weekly Update 4]]
+- [[Nera Weekly Update 3]]
+- [[Nera Weekly Update 2]]
+- [[Nera Weekly Update 1]]
 
 ![[vera-paper.pdf]]
 
