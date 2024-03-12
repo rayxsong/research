@@ -1,0 +1,1 @@
+大家好，我们现在有一个主题是“combination of direct code control of gcode and traditional slicing procedure” 的3D printing项目，目前目标是在五月中旬前完成一个可以提交到conference的demo，最终希望可以完成一篇paper，正在寻找了解Gcode和JS的同学加入，有兴趣的同学可以加我了解一下

@@ -1,6 +1,8 @@
 # Progress
 
-https://github.com/flynneva/godot_ros
+Since we are having difficulty working with Habitat, Maya suggested maybe we should try to look at some toy domain stuff to keep pushing the finite state machine visualization. So we will be exploring game engines to see if there are any thing we can adapt.
+
+
 
 # Intall ROS on Mac
 When I was searching for alternative robotics simulators in game engines, I found RoboStack, a bundling of the Robot Operating System (ROS) by Open Robotics for Linux, Mac and Windows using the `conda` package manager.

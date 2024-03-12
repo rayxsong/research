@@ -10,6 +10,7 @@ tags:
 
 DiffSinger, an acoustic model for SVS based on the diffusion probabilistic model.
 
+- [[Diffsinger Weekly Update 4]]
 - [[Diffsinger Weekly Update 3]]
 - [[Diffsinger Weekly Update 2]]
 - [[Diffsinger Weekly Update 1]]

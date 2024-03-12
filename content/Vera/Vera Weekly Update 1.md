@@ -91,6 +91,7 @@ pip install -U jupyter
 6. If it doesn't allow you  connect to SSH because it cannot find the correct hostname, go to your SSH config file, usually it is under `/Users/username/.ssh/config`, and you can see gcloud generated config. Make sure all `HostName` is your **External IP address** which you can find in VM information.
 
 # Safely Exit the SSH
+#MYLE 
 To start a training process on a virtual machine (VM) in the cloud and safely exit the SSH session without interrupting the training, you can use `tmux`.
 
 ```bash
