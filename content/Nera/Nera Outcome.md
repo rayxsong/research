@@ -1,4 +1,12 @@
+# Poster
+![[nera_onsite.jpeg]]
+
+
 ![[nera-poster.png]]
+# Report
+
+# Backup Files
+[Poster File in Figma](https://www.figma.com/file/9Z8m72S4z5uCLbJAEGFnQz/447-Poster?type=design&mode=design&t=hbuqIfIYlSZmteuM-1)
 # Not a Dataset
 ## Stage A
 wandb: Run summary:
