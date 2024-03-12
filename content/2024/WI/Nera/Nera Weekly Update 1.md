@@ -177,7 +177,7 @@ gdown Google-Drive-Shared-Link -O Local-Folder-Path --folder
 3. Prepare the [W&B API key](https://wandb.ai/authorize) if your code is using `wandb` to monitor training.
 4. `source ~/.bashrc` is a good friend to refresh `bash` and get some your new packages working.
 # Before this
-We spent a night trying to make Vera running on Colab, but we failed. It seems that Colab doesn't support `conda` very well, this the same issue I had in [[Finite-State Machine]] project. But it was helpful to know you could install some libraries on Colab permanently from [a blog post](https://netraneupane.medium.com/how-to-install-libraries-permanently-in-google-colab-fb15a585d8a5) sent by Jay. So we shifted to Google Cloud, it should work similarly as Colab works except GUI. It turned out, Google Cloud supports `conda` much better than Colab, the environment setup was smooth.
+We spent a night trying to make Vera running on Colab, but we failed. It seems that Colab doesn't support `conda` very well, this the same issue I had in [[2024/WI/FSM/Finite-State Machine]] project. But it was helpful to know you could install some libraries on Colab permanently from [a blog post](https://netraneupane.medium.com/how-to-install-libraries-permanently-in-google-colab-fb15a585d8a5) sent by Jay. So we shifted to Google Cloud, it should work similarly as Colab works except GUI. It turned out, Google Cloud supports `conda` much better than Colab, the environment setup was smooth.
 # Related Links
 - [Accelerate Library](https://huggingface.co/docs/accelerate/en/index), enables the same PyTorch code to be run across any distributed configuration.
 - [W&B](https://wandb.ai/site), AI developer platform, with tools for training models, fine-tuning models, and leveraging foundation models.

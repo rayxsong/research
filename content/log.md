@@ -1,3 +1,3 @@
 - 02-06-2024: To improve code readability, transfer all documentations from Google Doc to Obsidian, and hosting with [Quartz](https://quartz.jzhao.xyz/) online. Simple and good. Love it.
 - 02-08-2024: Start document [[Diffsinger]] notes.
-- 02-09-2024: Start document [[FIDELIS]] notes.
+- 02-09-2024: Start document [[2024/WI/FDM/FIDELIS]] notes.
